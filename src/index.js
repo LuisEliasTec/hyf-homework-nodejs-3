@@ -17,20 +17,18 @@ app.get('/users', function (req, res) {
     })
 })
 
-app.post('/users', function (req, res) {
-    // retrieve user posted data from the body
-    const user = req.body
-    console.log('user', user);
-    users.push({
-        name: user.name,
-        age: user.age
-    })
-    res.json({
-        success: true,
-        message: "successfully registered",
-        users: users
-    })
-})
+// app.post('/users', function (req, res) {
+//     const user = req.body
+//     users.push({
+//         name: user.name,
+//         age: user.age
+//     })
+//     res.json({
+//         success: true,
+//         message: "successfully registered",
+//         users: users
+//     })
+// })
 
 app.listen(3000, function () {
     console.log("server is running")
